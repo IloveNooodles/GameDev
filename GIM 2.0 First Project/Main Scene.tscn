@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Sprite/Player/character_femalePerson_idle.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/Player/Dead (3).png" type="Texture" id=3]
+[ext_resource path="res://Tile.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 33.7086, 65.8817 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 192.042, 317.549 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3175.09, 280.932 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( -0.471939, -23.5968 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Player"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+smoothing_enabled = true
+
+[node name="Tile" type="StaticBody2D" parent="."]
+position = Vector2( 99.0705, 209.266 )
+rotation = 1.08772
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Tile"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tile"]
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 256.732, 829.58 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_Area2D_body_entered"]
