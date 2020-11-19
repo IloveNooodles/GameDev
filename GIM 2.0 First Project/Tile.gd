@@ -7,6 +7,5 @@ extends StaticBody2D
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	position.y = lerp(position.y, get_global_mouse_position().y, 0.4)
+
 	

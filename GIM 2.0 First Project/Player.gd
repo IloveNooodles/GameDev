@@ -1,20 +1,24 @@
 extends KinematicBody2D
 
-var veclocity = 200
-var movement = Vector2()
+var velocity = 200
 var arah = Vector2()
-var gravity = 200
+var gravity = 2000
+var loncat = 1000
 
-func getInput(delta):
-	arah.x = 1
-	movement.x = arah.x * veclocity
-	movement.y += gravity * delta 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	getInput(delta)
-	movement = move_and_slide(movement, Vector2(0,1))
-
-
+func _physics_process(delta):
+	
+	arah.x = velocity
+	
+	arah = move_and_slide(arah,Vector2.UP)
+	
+	arah.y += gravity * delta 
+	 
+	if Input.is_action_just_pressed("jump") and is_on_floor() :
+		arah.y -= loncat
+	
 func _on_Area2D_body_entered(body):
 	if body.name == 'Player':
 		get_tree().change_scene("res://Main Scene.tscn")
+		
