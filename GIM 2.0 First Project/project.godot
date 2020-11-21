@@ -16,7 +16,11 @@ _global_script_class_icons={
 [application]
 
 config/name="GIM 2.0 First Project"
-run/main_scene="res://Main Scene.tscn"
+run/main_scene="res://Bg.tscn"
+
+[display]
+
+window/size/resizable=false
 
 [input]
 
