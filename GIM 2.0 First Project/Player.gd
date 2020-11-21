@@ -4,6 +4,7 @@ var velocity = 200
 var arah = Vector2()
 var gravity = 2000
 var loncat = 1000
+var coins = 0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,7 +13,6 @@ func sfxjump():
 	self.add_child(player)
 	player.stream = load("res://jump.wav")
 	player.play()
-	
 	
 func _physics_process(delta):
 	
@@ -30,7 +30,6 @@ func _on_Area2D_body_entered(body):
 	if body.name == 'Player':
 		get_tree().change_scene("res://Main Scene.tscn")
 		
-
-
-func _on_Player_tree_entered():
-	pass # Replace with function body.
+func add_coin():
+	coins += 1
+	print("coin saya adalah :", coins)

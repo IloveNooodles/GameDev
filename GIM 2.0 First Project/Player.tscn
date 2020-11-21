@@ -19,6 +19,7 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 smoothing_enabled = true
+drag_margin_right = 0.3
 
 [node name="Idle (3)" type="Sprite" parent="."]
 position = Vector2( 2, 0 )
