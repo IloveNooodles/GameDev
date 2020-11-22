@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Font/BebasNeue-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Font/KiriFont.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Font/Sniglet-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Sprite/UI/grey_button04.png" type="Texture" id=4]
 [ext_resource path="res://PlayButton.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -25,18 +24,18 @@ __meta__ = {
 }
 
 [node name="Color" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 600.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 color = Color( 0.266667, 0.305882, 0.65098, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 368.0
-margin_top = 144.0
-margin_right = 645.0
-margin_bottom = 264.0
+margin_left = 832.0
+margin_top = 264.0
+margin_right = 1109.0
+margin_bottom = 384.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.823529, 0.160784, 0.160784, 1 )
 custom_colors/font_outline_modulate = Color( 0.847059, 0.607843, 0.607843, 1 )
@@ -46,10 +45,10 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 344.0
-margin_top = 264.0
-margin_right = 688.0
-margin_bottom = 464.0
+margin_left = 792.0
+margin_top = 416.0
+margin_right = 1136.0
+margin_bottom = 616.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -60,7 +59,6 @@ margin_top = 22.0
 margin_right = 206.0
 margin_bottom = 67.0
 rect_scale = Vector2( 0.75, 0.75 )
-texture = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -105,10 +103,10 @@ __meta__ = {
 }
 
 [node name="PlayButton" type="Button" parent="."]
-margin_left = 456.0
-margin_top = 368.0
-margin_right = 568.0
-margin_bottom = 425.0
+margin_left = 912.0
+margin_top = 520.0
+margin_right = 1024.0
+margin_bottom = 577.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.72549, 0.286275, 0.772549, 1 )
 custom_colors/font_color_hover = Color( 0.415686, 0.101961, 0.101961, 1 )

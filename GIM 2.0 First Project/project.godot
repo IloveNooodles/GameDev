@@ -18,10 +18,6 @@ _global_script_class_icons={
 config/name="GIM 2.0 First Project"
 run/main_scene="res://Bg.tscn"
 
-[display]
-
-window/size/resizable=false
-
 [input]
 
 ui_accept={
@@ -74,5 +70,10 @@ Left={
 Right={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+stop={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
  ]
 }

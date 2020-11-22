@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://Player.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://steve_spriteframse.tres" type="SpriteFrames" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 22 )
@@ -12,14 +12,6 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 2, 0 )
-scale = Vector2( 0.1, 0.1 )
-frames = ExtResource( 2 )
-animation = "Run"
-playing = true
-offset = Vector2( 150, 0 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -1 )
 shape = SubResource( 1 )
@@ -28,3 +20,11 @@ shape = SubResource( 1 )
 current = true
 smoothing_enabled = true
 drag_margin_right = 0.3
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2, 0 )
+scale = Vector2( 0.1, 0.1 )
+frames = ExtResource( 2 )
+animation = "run"
+playing = true
+offset = Vector2( 150, 0 )
